@@ -1,11 +1,9 @@
-import { API_KEY } from "./secrets";
-
 const BASE_IMAGE_URL = `https://images-api.nasa.gov`;
 const APOD_BASE_IMAGE_URL = `https://api.nasa.gov/planetary/apod`;
 const COUNT = 30;
 
 export function getRandomImages() {
-  const URL = `${APOD_BASE_IMAGE_URL}?api_key=${API_KEY}&count=${COUNT}`;
+  const URL = `${APOD_BASE_IMAGE_URL}?api_key=${process.env.REACT_APP_API_KEY}&count=${COUNT}`;
   return fetch(URL);
 }
 
