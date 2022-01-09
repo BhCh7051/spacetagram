@@ -21,12 +21,15 @@ function HomePage() {
         setImages(
           // for(var i=0;i<data.length;i++)
           Data.map((image) => ({
-            id: image.id,
-            imageUrl: image.url,
-            downloadUrl: image.hdurl,
-            username: image.title,
-            userImageUrl: image.url,
-            profileUrl: image.url,
+              id: image.id,
+              imageUrl: image.url,
+              downloadUrl: image.hdurl,
+              title: image.title,
+              userImageUrl: image.url,
+              profileUrl: image.url,
+              description: image.explanation,
+              date: image.date,
+
           }))
         );
       })

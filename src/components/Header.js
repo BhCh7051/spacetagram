@@ -51,10 +51,10 @@ function Header() {
     <div className={`header__wrapper ${!showCategories && "border-bottom"}`}>
       <div className="header">
         <img
-          onClick={goToHomePage}
-          src="https://dhwwtar19mmjy.apowersoft.info/lightpdf/wp-content/uploads/2020/02/nasa-logo-20200225.jpg"
-          alt=""
-          className="header__Logo"
+            onClick={goToHomePage}
+            src="android-chrome-512x512.png"
+            alt=""
+            className="header__Logo"
         />
 
         <form onSubmit={handleSearchSubmit} className="header__input">

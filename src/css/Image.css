@@ -78,18 +78,18 @@
 }
 
 .like {
-  background-color: #f15151 !important;
-  color: #d5d5d5 !important;
-  border: 1px;
-  solid: #0000;
-  border-radius: 4px;
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.1s ease-in-out;
-  -webkit-user-select: none;
-  user-select: none;
-  white-space: nowrap;
+    background-color: #f15151 !important;
+    color: #ffffff !important;
+    border: 1px;
+    solid: #0000;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.1s ease-in-out;
+    -webkit-user-select: none;
+    user-select: none;
+    white-space: nowrap;
 }
 .MuiSvgIcon-root.like {
   color: #d5d5d5 !important;

@@ -23,13 +23,16 @@ function SearchPage() {
 
               setImages(
                   DataSet.map((image) => ({
-                  id: image.data[0].nasa_id,
-                  imageUrl: image.links[0].href,
-                  downloadUrl: image.imghref[0],
-                  username: image.data[0].title,
-                  userImageUrl: image.links[0].href,
-                  profileUrl: image.links[0].href,
-                }))
+                      id: image.data[0].nasa_id,
+                      imageUrl: image.links[0].href,
+                      downloadUrl: image.imghref[0],
+                      title: image.data[0].title,
+                      userImageUrl: image.links[0].href,
+                      profileUrl: image.links[0].href,
+                      description: image.data[0].description,
+                      date: image.data[0].date_created,
+                      keyword: image.date[0].keywords,
+                  }))
               );
             })
             .catch((error) => {
