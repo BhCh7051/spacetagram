@@ -53,19 +53,19 @@ const paperStyle = {
   // width: 900,
   // p: 2,
   padding: 20,
-  margin: "auto",
-  maxWidth: 1200,
-  flexGrow: 1,
-  // position: "absolute",
-  // top: "50%",
-  // left: "50%",
-  // overflow: "scroll",
-  // display: "block",
-  // transform: "translate(-50%, -50%)",
-  // bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
+    margin: "auto",
+    maxWidth: 1200,
+    flexGrow: 1,
+    // position: "absolute",
+    // top: "50%",
+    // left: "50%",
+    // overflow: "scroll",
+    // display: "block",
+    // transform: "translate(-50%, -50%)",
+    // bgcolor: "background.paper",
+    // border: "2px solid #000",
+    boxShadow: 28,
+    p: 4,
 };
 
 function Image({data}) {
@@ -125,17 +125,16 @@ function Image({data}) {
               className="image__button"
               title="Copy to Clipboard"
               onClick={() => {
-                navigator.clipboard.writeText(data.downloadUrl);
+                  navigator.clipboard.writeText(data.downloadUrl);
               }}
           >
-            <ContentCopyIcon fontSize="small"/>
+              <ContentCopyIcon fontSize="small"/>
           </Button>
-          {/*</Tooltip>*/}
+            {/*</Tooltip>*/}
         </div>
-        <button onClick={handleOpen}>clickme</button>
-        <img src={data.imageUrl} alt="" className="image__img"/>
+          <img src={data.imageUrl} onClick={handleOpen} alt="" className="image__img point"/>
 
-        <ImageLightbox key={data.imageUrl} data={data}/>
+
         <Modal
             style={{overflow: "scroll"}}
             aria-labelledby="spring-modal-title"
@@ -151,18 +150,20 @@ function Image({data}) {
           <Paper style={paperStyle}>
             <Fade in={open}>
               {/*<Box>*/}
-              <Grid
-                  container
-                  spacing={2}
-                  direction="column"
-                  justifyContent="center"
-              >
-                <div>
-                  <Grid
-                      container
-                      direction="row"
-                      justifyContent="space-between"
-                      alignItems="flex-start"
+                <Grid
+                    container
+                    columnSpacing={40}
+                    spacing={1}
+                    direction="column"
+                    justifyContent="center"
+                >
+                    <div>
+                        <Grid
+                            container
+                            direction="row"
+                            alignItems="stretch"
+                            justifyContent="space-between"
+
                   >
                     <Grid item>
                       <Typography
@@ -205,19 +206,6 @@ function Image({data}) {
                           <ContentCopyIcon id="Copy URL" fontSize="small"/>
                         </Button>{" "}
                       </ButtonGroup>
-                      <Button
-                          // onClick={downloadImage}
-
-                          onClick={downloadFile}
-                          variant="contained"
-                          color="success"
-                          // size="small"
-                          disableElevation
-                          // className="image__button"
-                          title="Download Photo"
-                      >
-                        Download <ArrowDownwardIcon fontSize="small"/>
-                      </Button>
                     </Grid>
                   </Grid>
 
@@ -229,25 +217,53 @@ function Image({data}) {
                     justifyContent="center"
                     alignItems="center"
                 >
-                  <Grid item>
-                    <img src={data.imageUrl} alt="" className="image__img"/>
-                  </Grid>
+
+                    <Grid item>
+                        <img src={data.imageUrl} alt="" className="image__img"/>
+                    </Grid>
                 </Grid>
-                <Grid item>
-                  <Typography id="spring-modal-title" variant="h6" component="h2">
-                    {data.date}
-                  </Typography>
-                </Grid>{" "}
-                <Grid item>
-                  <Typography id="spring-modal-title" variant="h6" component="h2">
-                    Description
-                  </Typography>
-                  <Typography id="spring-modal-description" sx={{mt: 2}}>
-                    {data.description}{" "}
-                  </Typography>
-                </Grid>
+
+                    <Grid
+                        container
+                        direction="row"
+                        alignItems="stretch"
+                        justifyContent="space-between"
+
+                    >
+                        <Grid item>
+                            <Typography id="spring-modal-title" variant="h6" component="h2">
+                                {data.date}
+                            </Typography>
+                        </Grid>{" "}
+
+                        <Grid item>
+                            <ButtonGroup>
+                                <Button
+                                    // onClick={downloadImage}
+
+                                    onClick={downloadImage}
+                                    variant="contained"
+                                    color="success"
+                                    // size="small"
+                                    disableElevation
+                                    // className="image__button"
+                                    title="Download Photo"
+                                >
+                                    Download <ArrowDownwardIcon fontSize="small"/>
+                                </Button>
+                            </ButtonGroup>
+
+                        </Grid>
+                    </Grid>
+                    <Grid item>
+                        <Typography id="spring-modal-title" variant="h6" component="h2">
+                            Description
+                        </Typography>
+                        <Typography id="spring-modal-description" sx={{mt: 2}}>
+                            {data.description}{" "}
+                        </Typography>
+                    </Grid>
               </Grid>
-              {/*</Box>*/}
             </Fade>
           </Paper>
         </Modal>
@@ -259,7 +275,7 @@ function Image({data}) {
           {/*<a href={data.downloadUrl}  download="" target="_blank" rel="noopener noreferrer" title="Download photo">*/}
           <Button
               // onClick={downloadImage}
-              onClick={downloadFile}
+              onClick={downloadImage}
               variant="contained"
               size="small"
               disableElevation
