@@ -70,8 +70,8 @@ const paperStyle = {
 
 function Image({data}) {
   const downloadFile = () => {
-    // window.location.href = data.downloadUrl;
-    FileSaver.saveAs(data.downloadUrl);
+    window.location.href = data.downloadUrl;
+    // FileSaver.saveAs(data.downloadUrl);
   };
   const downloadImage = async () => {
     try {
