@@ -1,2 +1,5 @@
 /*
     Access-Control-Allow-Origin: *
+    Access-Control-Allow-Headers: Origin
+    Access-Control-Allow-Methods: GET, PUT, POST, DELETE, HEAD, OPTIONS
+    Access-Control-Allow-Methods: *
