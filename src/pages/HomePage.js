@@ -29,7 +29,6 @@ function HomePage() {
               profileUrl: image.url,
               description: image.explanation,
               date: image.date,
-
           }))
         );
       })

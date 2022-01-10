@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import Image from "../components/Image";
-import { useParams } from "react-router-dom";
+// import ImageLightbox from "../components/ImageLightbox";
 
-import { searchImages } from "../nasa";
+import {useParams} from "react-router-dom";
+
+import {searchImages} from "../nasa";
 
 function SearchPage() {
-  const { searchTerm } = useParams();
-  const [images, setImages] = useState([]);
+    const {searchTerm} = useParams();
+    const [images, setImages] = useState([]);
 
-  useEffect(() => {
+    useEffect(() => {
     searchImages(searchTerm)
       .then((res) => res.json())
       .then((data) => {
@@ -18,7 +20,7 @@ function SearchPage() {
           fetch(Data.href)
             .then((response) => response.json())
             .then((responseJson) => {
-              Data["imghref"] = responseJson;
+                Data["imghref"] = responseJson;
                 console.log(DataSet);
 
               setImages(
@@ -35,9 +37,9 @@ function SearchPage() {
                   }))
               );
             })
-            .catch((error) => {
-            });
-        })
+              .catch((error) => {
+              });
+        });
       })
       .catch((error) => alert(error));
   }, [searchTerm]);
