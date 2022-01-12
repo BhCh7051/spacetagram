@@ -85,7 +85,7 @@
   background-color: #f15151 !important;
   color: #ffffff !important;
   border: 1px;
-  solid: #0000;
+  solid: #000000;
   border-radius: 4px;
   display: inline-block;
   text-align: center;
@@ -95,6 +95,59 @@
   user-select: none;
   white-space: nowrap;
 }
-.MuiSvgIcon-root.like {
-  color: #d5d5d5 !important;
+
+/*.MuiSvgIcon-root.like {*/
+/*  color: #d5d5d5 !important;*/
+/*}*/
+.download {
+  background-color: #3cb46e !important;
+  color: white !important;
+  text-transform: none !important;
+  font-size: 15px !important;
+  line-height: 30px !important;
+  font-weight: 500 !important;
+}
+
+.image__tags:hover {
+  background-color: #e1e1e1 !important;
+  color: #111 !important;
+}
+
+.image__tags {
+  background-color: rgb(238, 238, 238) !important;
+  color: #767676 !important;
+  border-radius: 4px !important;
+  display: inline-block;
+  font-size: 16px !important;
+  line-height: 26px !important;
+  font-family: -apple-system, BlinkMacSystemFont, San Francisco, Helvetica Neue,
+  Helvetica, Ubuntu, Roboto, Noto, Segoe UI, Arial, sans-serif !important;
+  padding: 8px !important;
+  text-decoration: none;
+  text-transform: capitalize !important;
+  transition: all 0.1s ease-in-out;
+  margin: 5px !important;
+  box-sizing: border-box;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.shimmer {
+  color: grey;
+  display: inline-block;
+  -webkit-mask: linear-gradient(-60deg, #000 30%, #0005, #000 70%) right/300% 100%;
+  background-repeat: no-repeat;
+  animation: shimmer 2.5s infinite;
+  font-size: 50px;
+  /*max-width:200px;*/
+}
+
+@keyframes shimmer {
+  100% {
+    -webkit-mask-position: left;
+  }
 }

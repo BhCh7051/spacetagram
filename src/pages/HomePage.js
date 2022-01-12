@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import Hero from "../components/Hero";
-import Image from "../components/Image";
+import Images from "../components/Images";
 
-import { getRandomImages } from "../nasa";
+import {getRandomImages} from "../nasa";
 
 function HomePage() {
   const [images, setImages] = useState([]);
@@ -21,12 +21,12 @@ function HomePage() {
         setImages(
           // for(var i=0;i<data.length;i++)
           Data.map((image) => ({
-              id: image.id,
+              // id: image.id,
               imageUrl: image.url,
               downloadUrl: image.hdurl,
               title: image.title,
-              userImageUrl: image.url,
-              profileUrl: image.url,
+              // userImageUrl: image.url,
+              // profileUrl: image.url,
               description: image.explanation,
               date: image.date,
           }))
@@ -43,7 +43,7 @@ function HomePage() {
         <div className="container">
           <div className="images__container">
             {images.map((image) => (
-              <Image key={image.imageUrl} data={image} />
+                <Images key={image.imageUrl} data={image}/>
             ))}
           </div>
         </div>

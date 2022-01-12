@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/Catergories.css";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 function Categories() {
   return (
@@ -8,7 +8,7 @@ function Categories() {
       <Link to="/" className="categories__item categories__item--active">
         APOD
       </Link>
-      <Link to="/" className="categories__item">
+      <Link to="/s/nasa" className="categories__item">
         NASA
       </Link>
 
