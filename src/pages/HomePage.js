@@ -11,7 +11,7 @@ function HomePage() {
     getRandomImages()
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // // console.log(data);
         var Data = [];
         for (var i = 0; i < data.length; i++) {
           if (data[i].media_type === "image") {
@@ -34,7 +34,7 @@ function HomePage() {
       })
       .catch((error) => alert(error));
   }, []);
-  console.log(images);
+    // // console.log(images);
   return (
     <>
       <Hero />

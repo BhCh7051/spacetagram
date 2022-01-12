@@ -15,11 +15,9 @@ import Typography from "@material-ui/core/Typography";
 import {animated, useSpring} from "react-spring";
 import useIntersectionObserver from "../hooks/use-intersection-observer";
 
-
 function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
-
 const Fade = React.forwardRef(function Fade(props, ref) {
   const {in: open, children, onEnter, onExited, ...other} = props;
   const style = useSpring({
@@ -83,7 +81,7 @@ const paperStyle = {
 };
 
 function Images({data}) {
-  console.log(data);
+  // // console.log(data);
   const downloadFile = () => {
     window.location.href = data.downloadUrl;
     // FileSaver.saveAs(data.downloadUrl);
@@ -137,7 +135,7 @@ function Images({data}) {
   });
   let img = new Image();
   img.url = data.imageUrl;
-  console.log(img);
+  // console.log(img);
   return (
       <div className="image">
         <div className="image__header">
@@ -361,7 +359,7 @@ function Images({data}) {
                       </Typography>
                       <div style={chipStyle}>
                         {data.keywords.map((key, i) => {
-                          console.log("Entered");
+                          // console.log("Entered");
                           // Return the element. Also pass key
                           return (
                               <Link to={`/s/${key}`}>
@@ -400,7 +398,7 @@ function Images({data}) {
           <a href={data.downloadUrl} download="" target="" rel="noopener noreferrer" title="Download photo">
             <Button
                 // onClick={downloadImage}
-                onClick={downloadImage}
+                // onClick={downloadImage}
                 variant="contained"
                 size="small"
                 disableElevation

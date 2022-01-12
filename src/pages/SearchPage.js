@@ -13,7 +13,7 @@ function SearchPage() {
         searchImages(searchTerm)
             .then((res) => res.json())
             .then((data) => {
-                console.log(data.collection.items);
+                // console.log(data.collection.items);
                 var DataSet = data.collection.items;
                 DataSet.forEach(function (Data) {
                     fetch(Data.href)
