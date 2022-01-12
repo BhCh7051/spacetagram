@@ -4,7 +4,6 @@ import {Link} from "react-router-dom";
 import {Button, ButtonGroup, Chip, Grid, Paper,} from "@material-ui/core";
 import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
-// web.cjs is required for IE11 support
 import {createTheme} from "@material-ui/core/styles";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import ContentCopyIcon from "@material-ui/icons/FileCopy";
@@ -16,13 +15,11 @@ import Typography from "@material-ui/core/Typography";
 import {animated, useSpring} from "react-spring";
 import useIntersectionObserver from "../hooks/use-intersection-observer";
 
-// web.cjs is required for IE11 support
 
 function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
-var FileSaver = require("file-saver");
 const Fade = React.forwardRef(function Fade(props, ref) {
   const {in: open, children, onEnter, onExited, ...other} = props;
   const style = useSpring({
@@ -400,20 +397,19 @@ function Images({data}) {
             {/*<Avatar src={data.imageUrl}>{data.title}</Avatar>*/}
             <h4 className="image__footerLeftName">{data.title}</h4>
           </a>
-          {/*<a href={data.downloadUrl}  download="" target="_blank" rel="noopener noreferrer" title="Download photo">*/}
-          <Button
-              // onClick={downloadImage}
-              onClick={downloadImage}
-              variant="contained"
-              size="small"
-              disableElevation
-              className="image__button"
-              title="Download Photo"
-          >
-            <ArrowDownwardIcon fontSize="small"/>
-          </Button>
-
-          {/*</a>*/}
+          <a href={data.downloadUrl} download="" target="" rel="noopener noreferrer" title="Download photo">
+            <Button
+                // onClick={downloadImage}
+                onClick={downloadImage}
+                variant="contained"
+                size="small"
+                disableElevation
+                className="image__button"
+                title="Download Photo"
+            >
+              <ArrowDownwardIcon fontSize="small"/>
+            </Button>
+          </a>
         </div>
         <Snackbar
             open={openSnackbar}
