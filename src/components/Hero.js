@@ -1,9 +1,9 @@
-import React, { useRef } from "react";
+import React, {useRef} from "react";
 import "../css/Hero.css";
 import SearchIcon from "@material-ui/icons/Search";
 import ImageSearchIcon from "@material-ui/icons/ImageSearch";
 
-import { useHistory } from "react-router-dom";
+import {useHistory} from "react-router-dom";
 
 function Hero() {
   const history = useHistory();
@@ -22,23 +22,21 @@ function Hero() {
       <div className="hero__content">
         <div className="hero__contentWrapper">
           <h1 className="hero__contentTitle">nasa</h1>
-          <br />
+          <br/>
           <h3 className="hero__contentSubtitle">
-            The internet’s source of freely-usable images.
+            The internet’s source of space images.
           </h3>
-          <h3 className="hero__contentSubtitle">
-            Powered by creators everywhere.
-          </h3>
-          <br />
+          <h3 className="hero__contentSubtitle">Powered by NASA’s APIs.</h3>
+          <br/>
           <form onSubmit={handleSearchSubmit} className="hero__contentInput">
-            <SearchIcon className="header__icon" />
+            <SearchIcon className="header__icon"/>
             <input
-              ref={inputRef}
-              type="text"
-              className="hero__contentInputField"
-              placeholder="Search free high-resolution photos"
+                ref={inputRef}
+                type="text"
+                className="hero__contentInputField"
+                placeholder="Search Nasa images"
             />
-            <ImageSearchIcon className="header__icon" />
+            <ImageSearchIcon className="header__icon"/>
           </form>
         </div>
       </div>

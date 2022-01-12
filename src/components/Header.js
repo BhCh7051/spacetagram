@@ -1,13 +1,12 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, {useEffect, useRef, useState} from "react";
 import "../css/Header.css";
 import Catergories from "./Categories";
-import { Button, Avatar, Tooltip, Menu, MenuItem } from "@material-ui/core";
+import {Avatar, Button} from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import ImageSearchIcon from "@material-ui/icons/ImageSearch";
-import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 
-import { useHistory, useLocation } from "react-router-dom";
+import {useHistory, useLocation} from "react-router-dom";
 
 function Header() {
   const history = useHistory();
@@ -58,22 +57,22 @@ function Header() {
         />
 
         <form onSubmit={handleSearchSubmit} className="header__input">
-          <SearchIcon className="header__icon" />
+          <SearchIcon className="header__icon"/>
           <input
-            ref={inputRef}
-            type="text"
-            className="header__inputField"
-            placeholder="Search free high-resolution photos"
+              ref={inputRef}
+              type="text"
+              className="header__inputField"
+              placeholder="Search Nasa images"
           />
-          <ImageSearchIcon className="header__icon" />
+          <ImageSearchIcon className="header__icon"/>
         </form>
 
         <div className="header__right">
           <div className="header__rightButtonWrapper">
             <Button
-              onClick={goToHomePage}
-              size="small"
-              className="header__rightButton"
+                onClick={goToHomePage}
+                size="small"
+                className="header__rightButton"
             >
               Home
             </Button>
@@ -81,62 +80,56 @@ function Header() {
               Brands
             </Button>
           </div>
-
-          <div>
-            {" "}
-            {/* Drop Down Menu */}
-            <Tooltip title="More Options" arrow>
-              <MoreHorizIcon
-                className="header__rightIcon header__rightOptionsIcon"
-                onClick={handleOpen}
-                aria-controls="simple-menu"
-                aria-haspopup="true"
-              />
-            </Tooltip>
-            <Menu
-              elevation={2}
-              getContentAnchorEl={null}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "center",
-              }}
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "center",
-              }}
-              id="simple-menu"
-              anchorEl={anchorEl}
-              keepMounted
-              open={Boolean(anchorEl)}
-              onClose={handleClose}
-            >
-              <MenuItem>
-                <span className="header__rightMenuItem">Blogs</span>
-              </MenuItem>
-              <MenuItem>
-                <span className="header__rightMenuItem">Topics</span>
-              </MenuItem>
-              <MenuItem>
-                <span className="header__rightMenuItem">Collections</span>
-              </MenuItem>
-              <MenuItem>
-                <span className="header__rightMenuItem">Community</span>
-              </MenuItem>
-            </Menu>
-          </div>
-
-          <Button
-            className="header__rightButton"
-            size="small"
-            disableElevation
-            variant="contained"
-          >
-            Submit a photo
-          </Button>
-
-          <NotificationsActiveIcon className="header__rightIcon header__rightBellIcon" />
-
-          <Avatar className="header__rightAvatar" />
+          {/*<div>*/} {/* Drop Down Menu */}
+          {/*<Tooltip title="More Options" arrow>*/}
+          {/*  <MoreHorizIcon*/}
+          {/*    className="header__rightIcon header__rightOptionsIcon"*/}
+          {/*    onClick={handleOpen}*/}
+          {/*    aria-controls="simple-menu"*/}
+          {/*    aria-haspopup="true"*/}
+          {/*  />*/}
+          {/*</Tooltip>*/}
+          {/*<Menu*/}
+          {/*  elevation={2}*/}
+          {/*  getContentAnchorEl={null}*/}
+          {/*  anchorOrigin={{*/}
+          {/*    vertical: "bottom",*/}
+          {/*    horizontal: "center",*/}
+          {/*  }}*/}
+          {/*  transformOrigin={{*/}
+          {/*    vertical: "top",*/}
+          {/*    horizontal: "center",*/}
+          {/*  }}*/}
+          {/*  id="simple-menu"*/}
+          {/*  anchorEl={anchorEl}*/}
+          {/*  keepMounted*/}
+          {/*  open={Boolean(anchorEl)}*/}
+          {/*  onClose={handleClose}*/}
+          {/*>*/}
+          {/*<MenuItem>*/}
+          {/*  <span className="header__rightMenuItem">Blogs</span>*/}
+          {/*</MenuItem>*/}
+          {/*<MenuItem>*/}
+          {/*  <span className="header__rightMenuItem">Topics</span>*/}
+          {/*</MenuItem>*/}
+          {/*<MenuItem>*/}
+          {/*  <span className="header__rightMenuItem">Collections</span>*/}
+          {/*</MenuItem>*/}
+          {/*<MenuItem>*/}
+          {/*  <span className="header__rightMenuItem">Community</span>*/}
+          {/*</MenuItem>*/}
+          {/*</Menu>*/}
+          {/*</div>*/}
+          {/*<Button*/}
+          {/*  className="header__rightButton"*/}
+          {/*  size="small"*/}
+          {/*  disableElevation*/}
+          {/*  variant="contained"*/}
+          {/*>*/}
+          {/*  Submit a photo*/}
+          {/*</Button>*/}
+          <NotificationsActiveIcon className="header__rightIcon header__rightBellIcon"/>
+          <Avatar className="header__rightAvatar"/>
         </div>
       </div>
 
