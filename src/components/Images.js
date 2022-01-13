@@ -83,10 +83,10 @@ const paperStyle = {
 
 function Images({data}) {
     // // console.log(data);
-    const downloadFile = () => {
-        window.location.href = data.downloadUrl;
-        // FileSaver.saveAs(data.downloadUrl);
-    };
+    // const downloadFile = () => {
+    //     window.location.href = data.downloadUrl;
+    //     // FileSaver.saveAs(data.downloadUrl);
+    // };
     const downloadImage = async () => {
         try {
             const response = await fetch(data.downloadUrl);
