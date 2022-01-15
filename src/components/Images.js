@@ -1,12 +1,13 @@
 import React from "react";
 import "../css/Image.css";
 import {Link} from "react-router-dom";
-import {Button, ButtonGroup, Chip, Grid, Paper} from "@material-ui/core";
+import {Button, ButtonGroup, Chip, Grid, IconButton, Paper,} from "@material-ui/core";
 import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
 import {createTheme} from "@material-ui/core/styles";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import ContentCopyIcon from "@material-ui/icons/FileCopy";
+import BackIcon from "@material-ui/icons/ArrowBack";
 import CalendarIcon from "@material-ui/icons/CalendarToday";
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
 import Modal from "@material-ui/core/Modal";
@@ -43,53 +44,28 @@ const Fade = React.forwardRef(function Fade(props, ref) {
     );
 });
 
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     display: "flex",
-//     // justifyContent: 'center',
-//     flexWrap: "wrap",
-//     "& > *": {
-//       margin: theme.spacing(0.5),
-//     },
-//   },
-// }));
 const theme = createTheme();
 const chipStyle = {
     display: "flex",
-    // justifyContent: 'center',
     flexWrap: "wrap",
     "& > *": {
         margin: theme.spacing(4),
     },
 };
 const paperStyle = {
-    // width: 900,
-    // p: 2,
     padding: 30,
     margin: "auto",
     maxWidth: 1200,
     flexGrow: 1,
-    // position: "absolute",
-    // top: "50%",
-    // left: "50%",
-    // overflow: "scroll",
-    // display: "block",
-    // transform: "translate(-50%, -50%)",
     bgcolor: "background.paper",
-    // border: "2px solid #000",
     boxShadow: 28,
     p: 4,
 };
 
 function Images({data}) {
-    // // console.log(data);
-    // const downloadFile = () => {
-    //     window.location.href = data.downloadUrl;
-    //     // FileSaver.saveAs(data.downloadUrl);
-    // };
     const downloadImage = async () => {
         try {
-            const response = await fetch(data.downloadUrl);
+            const response = await fetch(data.imageUrl);
             const blob = await response.blob();
             // convert the blob to Data String Url
             let url = window.URL.createObjectURL(blob);
@@ -112,16 +88,10 @@ function Images({data}) {
     const ref = React.useRef();
     const [isVisible, setIsVisible] = React.useState(false);
     const [openSnackbar, setSnackbarOpen] = React.useState(false);
-    const [loading, setLoading] = React.useState(true);
-    const counter = React.useRef(0);
-    const imageLoaded = () => {
-        setLoading(false);
-    };
     const handleSnackbarClose = (event, reason) => {
         if (reason === "clickaway") {
             return;
         }
-
         setSnackbarOpen(false);
     };
 
@@ -138,17 +108,14 @@ function Images({data}) {
     img.url = data.imageUrl;
     // console.log(img);
     return (
-        <div className="image">
-            <div className="image__header">
+        <div id="fleximg" className="image">
+            <div className="image__header" id="btn">
                 <Button
-                    id="Favorite"
-                    // onClick={handleFavoriteSwitch}
+                    id="Favorite fav"
                     variant="contained"
                     size="small"
                     disableElevation
-                    className="image__button"
-                    // selected={selected}
-                    className={selected ? "like" : ""}
+                    className={selected ? "image__button like" : "image__button"}
                     onClick={() => {
                         setSelected(!selected);
                         var element = document.getElementById("Favorite");
@@ -158,11 +125,11 @@ function Images({data}) {
                 >
                     <FavoriteIcon id="Favorite" fontSize="small"/>
                 </Button>
-                &nbsp; &nbsp; &nbsp;
-                {/*<Tooltip  placement="top" title="✔ Copied to Clipboard">*/}
+                <div className="pad"></div>
                 <Button
                     variant="contained"
                     size="small"
+                    id="copy"
                     disableElevation
                     className="image__button"
                     title="Copy to Clipboard"
@@ -173,25 +140,19 @@ function Images({data}) {
                 >
                     <ContentCopyIcon fontSize="small"/>
                 </Button>
-                {/*</Tooltip>*/}
             </div>
-            <div
-                ref={ref}
-                className="image-container"
-                style={{display: loading ? "block" : "none", paddingBottom: 0.75}}
-            ></div>
 
-            {isVisible && (
-                <div className={{display: loading ? "none" : "block"}}>
+            <div id="img" ref={ref}>
+                {isVisible && (
                     <img
                         src={data.imageUrl}
                         onClick={handleOpen}
                         alt=""
-                        onLoad={imageLoaded}
+                        // onLoad={imageLoaded}
                         className="image__img point"
                     />
-                </div>
-            )}
+                )}
+            </div>
 
             <Modal
                 style={{overflow: "scroll"}}
@@ -205,28 +166,13 @@ function Images({data}) {
                     timeout: 500,
                 }}
             >
-                <Paper style={paperStyle}>
+                <Paper className="paper" style={paperStyle}>
                     <Fade in={open}>
-                        {/*<Box>*/}
-                        <Grid
-                            container
-                            // sx={{padding:20,}}
-                            // spacing={1}
-                            // md={6}
-                            // xs={12}
-                            direction="column"
-                            justifyContent="center"
-                        >
-                            {/*<Paper Elevation={0} style={{height: '100%',}}>*/}
+                        <Grid container direction="column" justifyContent="center">
                             <Grid
+                                className="paper__title"
                                 container
                                 item
-                                // sx={{
-                                //   p: 2,
-                                //   height: '100%',
-                                //   pt: "30px",
-                                //   pb: "30px",
-                                // }}
                                 direction="row"
                                 alignItems="stretch"
                                 justifyContent="space-between"
@@ -248,8 +194,9 @@ function Images({data}) {
                                             variant="outlined"
                                             size="small"
                                             disableElevation
-                                            className="image__button"
-                                            className={selected ? "like" : ""}
+                                            className={
+                                                selected ? "image__button like" : "image__button"
+                                            }
                                             onClick={() => {
                                                 setSelected(!selected);
                                                 var element = document.getElementById("Favorite");
@@ -259,7 +206,6 @@ function Images({data}) {
                                         >
                                             <FavoriteIcon id="Favorite" fontSize="small"/>
                                         </Button>
-                                        {/*<Tooltip  placement="top" title="✔ Copied to Clipboard">*/}
                                         <Button
                                             variant="outlined"
                                             size="small"
@@ -276,10 +222,6 @@ function Images({data}) {
                                     </ButtonGroup>
                                 </Grid>
                             </Grid>
-                            {/*</Paper>*/}
-
-                            {/*</Tooltip>*/}
-
                             <Grid
                                 container
                                 item
@@ -294,6 +236,7 @@ function Images({data}) {
 
                             <div style={{height: "20px"}}/>
                             <Grid
+                                className="paper__description"
                                 container
                                 item
                                 direction="row"
@@ -314,13 +257,11 @@ function Images({data}) {
                                 <Grid item>
                                     <ButtonGroup>
                                         <Button
-                                            // onClick={downloadImage}
                                             onClick={downloadImage}
                                             variant="contained"
                                             color="success"
-                                            // size="small"
                                             disableElevation
-                                            className="image__button download"
+                                            className="download"
                                             title="Download Photo"
                                         >
                                             Download
@@ -328,7 +269,7 @@ function Images({data}) {
                                     </ButtonGroup>
                                 </Grid>
                             </Grid>
-                            <Grid item>
+                            <Grid item className="paper__description">
                                 <Typography
                                     id="spring-modal-title"
                                     gutterBottom={true}
@@ -360,14 +301,11 @@ function Images({data}) {
                                     </Typography>
                                     <div style={chipStyle}>
                                         {data.keywords.map((key, i) => {
-                                            // console.log("Entered");
-                                            // Return the element. Also pass key
                                             return (
                                                 <Link to={`/s/${key}`}>
                                                     {" "}
                                                     <Chip
                                                         key={i}
-                                                        // component="a" history.push(`/s/${key}`)
                                                         className="image__tags"
                                                         label={key}
                                                         onClick={handleClose}
@@ -378,6 +316,14 @@ function Images({data}) {
                                     </div>
                                 </Grid>
                             )}
+                            <IconButton
+                                aria-label="back"
+                                className="back__button"
+                                size="large"
+                                onClick={handleClose}
+                            >
+                                <BackIcon fontSize="inherit"/>
+                            </IconButton>
                         </Grid>
                         <Snackbar
                             open={openSnackbar}
@@ -391,25 +337,26 @@ function Images({data}) {
                     </Fade>
                 </Paper>
             </Modal>
-            <div className="image__footer">
-                <a href={data.imageUrl} target="_blank" className="image__footerLeft">
-                    {/*<Avatar src={data.imageUrl}>{data.title}</Avatar>*/}
+            {/*<div className="image__footer">*/}
+            <div id="title" className="image__footer">
+                {" "}
+                <div className="image__footerLeft">
                     <h4 className="image__footerLeftName">{data.title}</h4>
-                </a>
-                {/*<a href={data.downloadUrl} download="" target="" rel="noopener noreferrer" title="Download photo">*/}
+                </div>
+            </div>
+            <div id="dlbtn" className="image__footer">
                 <Button
-                    // onClick={downloadImage}
                     onClick={downloadImage}
                     variant="contained"
                     size="small"
                     disableElevation
-                    className="image__button"
+                    className="image__button bottem__right"
                     title="Download Photo"
                 >
                     <ArrowDownwardIcon fontSize="small"/>
                 </Button>
-                {/*</a>*/}
             </div>
+            {/*</div>*/}
             <Snackbar
                 open={openSnackbar}
                 autoHideDuration={2000}
@@ -419,6 +366,7 @@ function Images({data}) {
                     ✔ Copied to Clipboard
                 </Alert>
             </Snackbar>
+            <div className="img__spacing"></div>
         </div>
     );
 }

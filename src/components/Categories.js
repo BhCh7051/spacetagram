@@ -30,44 +30,35 @@ function Categories() {
                 <Link to="/s/supermoon" className="categories__item">
                     Supermoon
                 </Link>
-                <Link to="/s/Business" className="categories__item">
-                    Busines
+                <Link to="/s/Jupiter" className="categories__item">
+                    Jupiter
                 </Link>
-                <Link to="/s/Experimental" className="categories__item">
-                    Experimental
+                <Link to="/s/Venus" className="categories__item">
+                    Venus
                 </Link>
                 <Link to="/s/fashion" className="categories__item">
                     Fashion
                 </Link>
-                <Link to="/s/film" className="categories__item">
-                    Film
+                <Link to="/s/ISS" className="categories__item">
+                    ISS
                 </Link>
-                <Link to="/s/health" className="categories__item">
-                    Health
+                <Link to="/s/Venus" className="categories__item">
+                    Venus
                 </Link>
                 <Link to="/s/technology" className="categories__item">
                     Technology
                 </Link>
-                <Link to="/s/travel" className="categories__item">
-                    Travel
+                <Link to="/s/ISRO" className="categories__item">
+                    ISRO
                 </Link>
-                <Link to="/s/textures" className="categories__item">
-                    Textures{" "}
+                <Link to="/s/SpaceX" className="categories__item">
+                    SpaceX{" "}
                 </Link>
-                <Link to="/s/animals" className="categories__item">
-                    Animals
+                <Link to="/s/Uranus" className="categories__item">
+                    Uranus
                 </Link>
-                <Link to="/s/food" className="categories__item">
-                    Food{" "}
-                </Link>
-                <Link to="/s/athletics" className="categories__item">
-                    Athletics
-                </Link>
-                <Link to="/s/spirituality" className="categories__item">
-                    Spirituality
-                </Link>
-                <Link to="/s/arts" className="categories__item">
-                    Arts
+                <Link to="/s/Neptune" className="categories__item">
+                    Neptune{" "}
                 </Link>
                 <Link to="/s/history" className="categories__item">
                     History

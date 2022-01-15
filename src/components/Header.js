@@ -51,7 +51,7 @@ function Header() {
             <div className="header">
                 <img
                     onClick={goToHomePage}
-                    src="android-chrome-512x512.png"
+                    src="./asset/android-chrome-512x512.png"
                     alt=""
                     className="header__Logo"
                 />
