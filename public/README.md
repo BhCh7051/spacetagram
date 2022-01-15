@@ -20,6 +20,6 @@ Insert the following code in the `head` section of your pages:
     <meta name="apple-mobile-web-app-title" content="Spacetagram">
     <meta name="application-name" content="Spacetagram">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#000000">
 
 *Optional* - Check your favicon with the [favicon checker](https://realfavicongenerator.net/favicon_checker)
