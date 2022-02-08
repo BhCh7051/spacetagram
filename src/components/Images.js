@@ -106,6 +106,7 @@ function Images({data}) {
     });
     let img = new Image();
     img.url = data.imageUrl;
+    let d = new Date(data.date);
     // console.log(img);
     return (
         <div id="fleximg" className="image">
@@ -251,7 +252,7 @@ function Images({data}) {
                                         gutterBottom
                                         color={"textSecondary"}
                                     >
-                                        <CalendarIcon fontSize="small"/> Captured on {data.date}
+                                        <CalendarIcon fontSize="small"/> Captured on {d.toLocaleString()}
                                     </Typography>
                                 </Grid>{" "}
                                 <Grid item>
