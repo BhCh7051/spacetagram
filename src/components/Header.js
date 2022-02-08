@@ -4,7 +4,6 @@ import Catergories from "./Categories";
 import {Avatar, Button} from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import ImageSearchIcon from "@material-ui/icons/ImageSearch";
-import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 
 import {useHistory, useLocation} from "react-router-dom";
 
@@ -76,9 +75,9 @@ function Header() {
                         >
                             Home
                         </Button>
-                        <Button size="small" className="header__rightButton">
+                        {/*   <Button size="small" className="header__rightButton">
                             Brands
-                        </Button>
+                        </Button>*/}
                     </div>
                     {/*<div>*/} {/* Drop Down Menu */}
                     {/*<Tooltip title="More Options" arrow>*/}
@@ -128,7 +127,7 @@ function Header() {
                     {/*>*/}
                     {/*  Submit a photo*/}
                     {/*</Button>*/}
-                    <NotificationsActiveIcon className="header__rightIcon header__rightBellIcon"/>
+                    {/*{<NotificationsActiveIcon className="header__rightIcon header__rightBellIcon"/>*/}
                     <Avatar className="header__rightAvatar"/>
                 </div>
             </div>

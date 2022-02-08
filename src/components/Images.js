@@ -111,19 +111,19 @@ function Images({data}) {
         <div id="fleximg" className="image">
             <div className="image__header" id="btn">
                 <Button
-                    id="Favorite fav"
+                    id="Favorite"
                     variant="contained"
                     size="small"
                     disableElevation
                     className={selected ? "image__button like" : "image__button"}
                     onClick={() => {
                         setSelected(!selected);
-                        var element = document.getElementById("Favorite");
-                        if (selected) element.classList.add("like");
-                        else element.classList.remove("like");
+                        // let element = document.getElementById("fav");
+                        // if (selected) element.classList.add("like");
+                        // else element.classList.remove("like");
                     }}
                 >
-                    <FavoriteIcon id="Favorite" fontSize="small"/>
+                    <FavoriteIcon id="favorite" fontSize="small"/>
                 </Button>
                 <div className="pad"></div>
                 <Button
@@ -199,12 +199,12 @@ function Images({data}) {
                                             }
                                             onClick={() => {
                                                 setSelected(!selected);
-                                                var element = document.getElementById("Favorite");
+                                                /*let element = document.getElementById("favorite");
                                                 if (selected) element.classList.add("like");
-                                                else element.classList.remove("like");
+                                                else element.classList.remove("like");*/
                                             }}
                                         >
-                                            <FavoriteIcon id="Favorite" fontSize="small"/>
+                                            <FavoriteIcon id="fav" fontSize="small"/>
                                         </Button>
                                         <Button
                                             variant="outlined"

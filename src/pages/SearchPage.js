@@ -4,6 +4,7 @@ import Images from "../components/Images";
 import {useParams} from "react-router-dom";
 
 import {searchImages} from "../nasa";
+import Typography from "@material-ui/core/Typography";
 
 function SearchPage() {
     const {searchTerm} = useParams();
@@ -43,15 +44,22 @@ function SearchPage() {
                 .catch((error) => alert(error))
         );
     }, [searchTerm]);
-
+    console.log(images);
     return (
         <div className="wrapper">
             <div className="container">
-                <h1 className="title">{searchTerm}</h1>
-
+                <Typography
+                    // id="spring-modal-title"
+                    variant="h2"
+                    className="title"
+                    component="h2"
+                    gutterBottom
+                >
+                    {searchTerm}
+                </Typography>
                 <div className="images__container">
                     {images.map((image) => (
-                        <Images key={image.imageUrl} data={image}/>
+                        <Images key={image.id} data={image}/>
                     ))}
                 </div>
             </div>

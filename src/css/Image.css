@@ -99,8 +99,8 @@
 .like {
     background-color: #f15151 !important;
     color: #ffffff !important;
-    border: 1px;
-    solid: #000000;
+    border: 1px !important;
+    solid: #000000 !important;
     border-radius: 4px;
     display: inline-block;
     text-align: center;
