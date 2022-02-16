@@ -1,9 +1,9 @@
 # Spacetagram
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3b3bff3f-aa1c-47b7-a93d-b904091d6498/deploy-status)](https://app.netlify.com/sites/spacetagram-nasa/deploys)
-![React](https://img.shields.io/badge/React-05122A/github/pipenv/locked/dependency-version/:user/:repo/:kind?/:packageName)
+![React](https://img.shields.io/badge/React-05122A&logo=react)
 ![React](https://img.shields.io/badge/Javascript-05122A)
-![Yarn](https://img.shields.io/badge/Yarn-05122A)
+![Yarn](https://img.shields.io/badge/Yarn-05122Al)
 ![Material-UI](https://img.shields.io/badge/Material--UI-05122A)
 ![GitHub last commit](https://img.shields.io/github/last-commit/BhCh7051/spacetagram-master)
 ![GitHub issues](https://img.shields.io/github/issues/BhCh7051/spacetagram-master)
