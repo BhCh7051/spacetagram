@@ -37,10 +37,10 @@ A website dedicated to sharing scientific images and videos, developed with Reac
 
 - Clone the repo, install all the dependencies from package.json by typing `yarn`
 - Create a API KEY from [nasa](https://api.nasa.gov/)
-- Create a file with name `secrets.js` inside `src` and place your api key as shown below
+- Create a environment file `.env` inside root folder and place your api key as shown below
 
-```javascript
-export const API_KEY = "PLACE YOUR API KEY HERE";
+```dotenv
+REACT_APP_API_KEY = "PLACE YOUR API KEY HERE"
 ```
 
 - Run app by typing `yarn start`
