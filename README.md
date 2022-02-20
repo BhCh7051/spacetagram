@@ -27,11 +27,11 @@ A website dedicated to sharing scientific images and videos, developed with Reac
 
 ### Preview
 
-<img src="./public/spacetagram.gif" />
+[Imgur](https://i.imgur.com/ZfHTYut.gifv)
 
 ### Smartphone Preview
 
-<img src="./public/spacetagramMobile.gif" />
+[Imgur](https://i.imgur.com/uvKrCQj.gifv)
 
 ### To run this on Local machine
 
