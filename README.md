@@ -36,7 +36,7 @@ A website dedicated to sharing scientific images and videos, developed with Reac
 ### To run this on Local machine
 
 - Clone the repo, install all the dependencies from package.json by typing `yarn`
-- Create a API KEY from [nasa](https://api.nasa.gov/)
+- Create a API KEY from [Nasa { APIs }] (https://api.nasa.gov/)
 - Create a environment file `.env` inside root folder and place your api key as shown below
 
 ```dotenv
