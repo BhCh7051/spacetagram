@@ -27,12 +27,14 @@ A website dedicated to sharing scientific images and videos, developed with Reac
 
 ### Preview
 
-<img src="https://imgur.com/ZfHTYut" />
+<img src="https://i.imgur.com/ZfHTYut.gifv" />
+
+
+[]()
 
 ### Smartphone Preview
 
-<img src="https://imgur.com/uvKrCQj" />
-[Imgur](.gifv)
+<img src="https://i.imgur.com/uvKrCQj.gifv" />
 
 ### To run this on Local machine
 
