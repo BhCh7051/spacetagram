@@ -12,7 +12,7 @@ const hideLoader = () => {
         loader.classList.add("loader--hide");
         const container = document.querySelector(".app--container");
         container.classList.remove("app--hide");
-    }, 4000);
+    }, 2000);
 };
 const LoadingIndicator = (props) => {
     const {promiseInProgress} = usePromiseTracker();

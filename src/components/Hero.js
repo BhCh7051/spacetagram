@@ -21,7 +21,7 @@ function Hero() {
 
             <div className="hero__content">
                 <div className="hero__contentWrapper">
-                    <h1 className="hero__contentTitle">nasa</h1>
+                    <h1 className="hero__contentTitle">spacetagram</h1>
                     <br/>
                     <h3 className="hero__contentSubtitle">
                         The internet’s source of space images.

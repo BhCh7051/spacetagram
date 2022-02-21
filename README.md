@@ -13,6 +13,8 @@ A website dedicated to sharing scientific images and videos, developed with Reac
 
 **Click [Here](https://spacetagram-nasa.netlify.app/) to view the Live Website**
 
+---
+
 ### Features
 
 - Search Images
@@ -22,33 +24,47 @@ A website dedicated to sharing scientific images and videos, developed with Reac
 
 - **React**
     - **Material-UI** - Icons and Prebuilt Components
-    - **react-router-dom** - To manage routing between different pages
+        - **react-router-dom** - To manage routing between different pages
 - **Netlify** (Hosting service)
 
 ### Preview
 
-<img src="https://i.imgur.com/ZfHTYut.gif" />
-
-
-[]()
+<p align="center">
+<img src="./public/spacetagram.gif" />
+</p>
 
 ### Smartphone Preview
 
-<img src="https://i.imgur.com/uvKrCQj.gif" />
-
+<p align="center">
+<img src="./public/spacetagramMobile.gif" />
+</p>
 ### To run this on Local machine
 
-- Clone the repo, install all the dependencies from package.json by typing `yarn`
-- Create a API KEY from [Nasa { APIs }] (https://api.nasa.gov/)
+Firstly make sure that you have [Node](https://nodejs.org/en/download/)
+and [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)  installed.
+
+- Clone the repo, install all the dependencies from package.json by typing
+
+  ```yarn install```
+
+- Create a API KEY from [Nasa { APIs }](https://api.nasa.gov/)
+
 - Create a environment file `.env` inside root folder and place your api key as shown below
 
-```dotenv
-REACT_APP_API_KEY = "PLACE YOUR API KEY HERE"
-```
+  ```dotenv
+  REACT_APP_API_KEY = "PLACE YOUR API KEY HERE"
+  ```
 
-- Run app by typing `yarn start`
+- Run app by typing
 
-**For complete usage information and detailed examples, visit
+  ```
+  yarn start
+  ```
+
+The local version of Spactagram defaults to port 3000, open up your browser and
+type [`localhost:3000`](http://localhost:3000) into your browser. Now your app should be up and running.
+
+**For complete usage information and detailed examples of api, visit
 the [NASA Image and Video Library API documentation](https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf)**
 
 ### Content Copyright
