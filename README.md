@@ -38,6 +38,7 @@ A website dedicated to sharing scientific images and videos, developed with Reac
 <p align="center">
 <img src="./public/spacetagramMobile.gif" />
 </p>
+
 ### To run this on Local machine
 
 Firstly make sure that you have [Node](https://nodejs.org/en/download/)
