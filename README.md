@@ -9,7 +9,7 @@
 ![GitHub issues](https://img.shields.io/github/issues/BhCh7051/spacetagram-master)
 ![GitHub repo size](https://img.shields.io/github/repo-size/BhCh7051/spacetagram-master)
 
-A website dedicated to sharing scientific images and videos, developed with React🚀 and NASA Image API
+A Progressive web app (PWA) dedicated to sharing scientific images and videos, developed with React🚀 and NASA Image API
 
 **Click [Here](https://spacetagram-nasa.netlify.app/) to view the Live Website**
 
