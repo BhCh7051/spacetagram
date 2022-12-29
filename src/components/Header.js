@@ -75,59 +75,8 @@ function Header() {
                         >
                             Home
                         </Button>
-                        {/*   <Button size="small" className="header__rightButton">
-                            Brands
-                        </Button>*/}
+
                     </div>
-                    {/*<div>*/} {/* Drop Down Menu */}
-                    {/*<Tooltip title="More Options" arrow>*/}
-                    {/*  <MoreHorizIcon*/}
-                    {/*    className="header__rightIcon header__rightOptionsIcon"*/}
-                    {/*    onClick={handleOpen}*/}
-                    {/*    aria-controls="simple-menu"*/}
-                    {/*    aria-haspopup="true"*/}
-                    {/*  />*/}
-                    {/*</Tooltip>*/}
-                    {/*<Menu*/}
-                    {/*  elevation={2}*/}
-                    {/*  getContentAnchorEl={null}*/}
-                    {/*  anchorOrigin={{*/}
-                    {/*    vertical: "bottom",*/}
-                    {/*    horizontal: "center",*/}
-                    {/*  }}*/}
-                    {/*  transformOrigin={{*/}
-                    {/*    vertical: "top",*/}
-                    {/*    horizontal: "center",*/}
-                    {/*  }}*/}
-                    {/*  id="simple-menu"*/}
-                    {/*  anchorEl={anchorEl}*/}
-                    {/*  keepMounted*/}
-                    {/*  open={Boolean(anchorEl)}*/}
-                    {/*  onClose={handleClose}*/}
-                    {/*>*/}
-                    {/*<MenuItem>*/}
-                    {/*  <span className="header__rightMenuItem">Blogs</span>*/}
-                    {/*</MenuItem>*/}
-                    {/*<MenuItem>*/}
-                    {/*  <span className="header__rightMenuItem">Topics</span>*/}
-                    {/*</MenuItem>*/}
-                    {/*<MenuItem>*/}
-                    {/*  <span className="header__rightMenuItem">Collections</span>*/}
-                    {/*</MenuItem>*/}
-                    {/*<MenuItem>*/}
-                    {/*  <span className="header__rightMenuItem">Community</span>*/}
-                    {/*</MenuItem>*/}
-                    {/*</Menu>*/}
-                    {/*</div>*/}
-                    {/*<Button*/}
-                    {/*  className="header__rightButton"*/}
-                    {/*  size="small"*/}
-                    {/*  disableElevation*/}
-                    {/*  variant="contained"*/}
-                    {/*>*/}
-                    {/*  Submit a photo*/}
-                    {/*</Button>*/}
-                    {/*{<NotificationsActiveIcon className="header__rightIcon header__rightBellIcon"/>*/}
                     <Avatar className="header__rightAvatar"/>
                 </div>
             </div>

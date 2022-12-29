@@ -15,8 +15,7 @@ function SearchPage() {
             searchImages(searchTerm)
                 .then((res) => res.json())
                 .then((data) => {
-                    // console.log(data.collection.items);
-                    var DataSet = data.collection.items;
+                    let DataSet = data.collection.items;
                     DataSet.forEach(function (Data) {
                         fetch(Data.href)
                             .then((response) => response.json())
@@ -29,8 +28,6 @@ function SearchPage() {
                                         imageUrl: image.links[0].href,
                                         downloadUrl: image.imghref[0],
                                         title: image.data[0].title,
-                                        // userImageUrl: image.links[0].href,
-                                        // profileUrl: image.links[0].href,
                                         description: image.data[0].description,
                                         date: image.data[0].date_created,
                                         keywords: image.data[0].keywords,
@@ -44,12 +41,10 @@ function SearchPage() {
                 .catch((error) => alert(error))
         );
     }, [searchTerm]);
-    console.log(images);
     return (
         <div className="wrapper">
             <div className="container">
                 <Typography
-                    // id="spring-modal-title"
                     variant="h2"
                     className="title"
                     component="h2"

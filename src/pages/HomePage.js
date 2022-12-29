@@ -13,22 +13,17 @@ function HomePage() {
             getRandomImages()
                 .then((res) => res.json())
                 .then((data) => {
-                    // // console.log(data);
-                    var Data = [];
+                    let Data = [];
                     for (var i = 0; i < data.length; i++) {
                         if (data[i].media_type === "image") {
                             Data.push(data[i]);
                         }
                     }
                     setImages(
-                        // for(var i=0;i<data.length;i++)
                         Data.map((image) => ({
-                            // id: image.id,
                             imageUrl: image.url,
                             downloadUrl: image.hdurl,
                             title: image.title,
-                            // userImageUrl: image.url,
-                            // profileUrl: image.url,
                             description: image.explanation,
                             date: image.date,
                         }))
@@ -37,7 +32,6 @@ function HomePage() {
                 .catch((error) => alert(error))
         );
     }, []);
-    // // console.log(images);
     return (
         <>
             <Hero/>
